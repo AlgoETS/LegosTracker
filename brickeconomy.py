@@ -102,7 +102,6 @@ class LegoAPI:
                     history_data = matches[0].replace("\n", "").replace("null", "'null'")
 
                     history_entries = []
-                    print(history_data)
                     pattern_date = re.compile(r"new Date\((\d+), (\d+), (\d+)\), (\d+\.?\d*), '([^']*)', '([^']*)'(?:, '([^']*)')?(?:, '([^']*)')?")
 
                     for match in pattern_date.finditer(history_data):
@@ -140,6 +139,8 @@ class LegoAPI:
                                 ]
                             )
 
+                    print("History data written to CSV")
+                    print(len(matches))
                     if len(matches) > 1:
                         new_data = matches[1].replace("\n", "").replace("null", "'null'")
                         pattern_new = re.compile(r"new Date\((\d+), (\d+), (\d+)\), (\d+\.?\d*), (\d+\.?\d*), (\d+\.?\d*), (\d+\.?\d*), '([^']*)'")
@@ -150,7 +151,7 @@ class LegoAPI:
                             month += 1
                             date = datetime(year, month, day)
                             value1, value2, value3, value4 = map(float, match.groups()[3:7])
-                            description = match.group(7)
+                            description = match.group(8)
                             new_entries.append(
                                 NewEntry(
                                     date=date,
@@ -179,6 +180,7 @@ class LegoAPI:
                                         entry.description,
                                     ]
                                 )
+                        print("New data written to CSV")
                     else:
                         pass
 
