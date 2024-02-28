@@ -11,6 +11,15 @@ https://github.com/hevalhazalkurt/exploring_the_data_of_LEGO_history
 
 ## Dataset Informations
 
+## Basic Understanding of Datasets
+
+The schema of database :
+
+![](images/downloads_database_schema_v3.png)
+
+
+---
+
 
 | Dataset | Description | Columns |
 |--|--|--|
@@ -23,14 +32,5 @@ https://github.com/hevalhazalkurt/exploring_the_data_of_LEGO_history
 | `parts.csv` | This dataset includes information on lego parts, including a unique ID number, the name of the part, and what part category it's from. | `part_num` Unique ID for the part. <br><br> `name` Name of the part. <br><br> `part_cat_id` Part category unique ID (from `part_categories.csv`). |
 | `sets.csv` | This file contains information on LEGO sets, including a unique ID number, the name of the set, the year it was released, its theme and how many parts it includes. | `set_num` Unique set ID. <br><br> `name` The name of the set. <br><br> `year` Year the set was published. <br><br> `theme_id` Unique ID for the theme used for the set (from `themes.csv`). <br><br> `num_parts` The number of parts included in the set. |
 | `themes.csv` | This file includes information on lego themes. Each theme is given a unique ID number, a name, and (if it's part of a bigger theme) which theme it's part of. | `id` Theme unique ID. <br><br> `name` Name of the theme. <br><br> `parent_id` Unique ID for the larger theme, if there is one. |
-
----
-
-## Basic Understanding of Datasets
-
-The schema of database :
-
-![](images/downloads_database_schema_v3.png)
-
 
 ---
