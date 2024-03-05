@@ -15,7 +15,7 @@ https://github.com/hevalhazalkurt/exploring_the_data_of_LEGO_history
 
 The schema of database :
 
-![](images/downloads_database_schema_v3.png)
+![](https://raw.githubusercontent.com/AlgoETS/LegosTracker/main/images/downloads_schema_v3.webp)
 
 
 ---
